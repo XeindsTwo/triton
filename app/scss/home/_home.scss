@@ -1,0 +1,45 @@
+.home {
+  &__content {
+    @include flex-column(0);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 96px;
+    line-height: 1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    @include flex-between-center-gap(30);
+    align-items: center;
+  }
+
+  &__benefit {
+    max-width: 340px;
+    width: 100%;
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__subtext {
+    line-height: 1.5;
+  }
+}

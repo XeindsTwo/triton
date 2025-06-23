@@ -1,0 +1,32 @@
+.btn {
+  @include flex-align-center(10);
+  justify-content: center;
+  padding: 15px 22px;
+  background-color: $black50;
+  color: $white;
+  line-height: 1;
+  border-radius: 10px;
+  max-width: max-content;
+  border: 1px solid transparent;
+  transition: color .4s, background-color .4s, border .4s;
+
+  &:hover {
+    background-color: rgba($black50, .85);
+    border-color: transparent;
+    color: #f2f2f5;
+
+    svg {
+      transform: translateX(2px);
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+    color: $black50;
+    border-color: $black50;
+
+    svg path {
+      fill: $accent;
+    }
+  }
+}

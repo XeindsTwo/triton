@@ -1,0 +1,41 @@
+.input {
+  padding: 0 0 12px 0;
+  width: 100%;
+  font-size: 16px;
+  color: $white;
+  border-bottom: 1px solid #393939;
+  background-color: transparent;
+  transition: border .4s, color .4s;
+
+  &:hover {
+    border-color: $accent;
+  }
+
+  &:focus {
+    border-color: $accent;
+  }
+}
+
+.label {
+  display: block;
+  color: $white;
+  font-size: 16px;
+  line-height: 1;
+
+  &--big {
+    font-size: 22px;
+    margin-bottom: 4px;
+    @media (max-height: 680px) {
+      font-size: 20px;
+    }
+    @include r($lg) {
+      font-size: 20px;
+    }
+    @media (max-width: 700px) {
+      font-size: 19px;
+    }
+    @include r($phone) {
+      font-size: 18px;
+    }
+  }
+}

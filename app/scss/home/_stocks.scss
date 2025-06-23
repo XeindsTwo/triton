@@ -1,0 +1,31 @@
+.stocks {
+  &__list {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__card {
+
+  }
+
+  &__img {
+    @include objectCoverBg;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__description {
+    max-width: 350px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    color: rgba($black50, .8);
+  }
+}
