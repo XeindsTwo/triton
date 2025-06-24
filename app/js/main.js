@@ -19,9 +19,11 @@ menuLinks.forEach((menuLink) => {
   menuLink.addEventListener('click', scrollToSection);
 });
 
-new Swiper('.reviews__swiper', {
+new Swiper('.partners__swiper', {
   autoHeight: true,
-  speed: 700,
+  speed: 500,
+  slidesPerView: 5,
+  spaceBetween: 25,
   keyboard: {
     enabled: true,
     onlyInViewport: true
@@ -30,15 +32,4 @@ new Swiper('.reviews__swiper', {
     prevEl: '.reviews__btn--prev',
     nextEl: '.reviews__btn--next'
   },
-  breakpoints: {
-    1160: {
-      slidesPerView: 3,
-    },
-    760: {
-      slidesPerView: 2,
-    },
-    320: {
-      slidesPerView: 'auto'
-    }
-  }
 });

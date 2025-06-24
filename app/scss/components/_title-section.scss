@@ -4,4 +4,10 @@
   margin-bottom: 46px;
   text-align: center;
   font-weight: 600;
+
+  &--small {
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
 }

@@ -28,4 +28,21 @@
     margin-bottom: 35px;
     color: rgba($black50, .8);
   }
+
+  &__link {
+    @include flex-align-center(12);
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: rgba($black, .7);
+    }
+
+    &:focus {
+      color: $accent;
+
+      svg {
+        transform: translateX(2px);
+      }
+    }
+  }
 }

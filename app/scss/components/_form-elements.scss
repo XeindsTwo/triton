@@ -1,10 +1,11 @@
 .input {
-  padding: 0 0 12px 0;
+  padding: 16px 16px;
   width: 100%;
   font-size: 16px;
-  color: $white;
-  border-bottom: 1px solid #393939;
-  background-color: transparent;
+  border-radius: 10px;
+  color: $black50;
+  background-color: #E7E7E7;
+  border: 1px solid rgba($black50, .4);
   transition: border .4s, color .4s;
 
   &:hover {
@@ -18,24 +19,7 @@
 
 .label {
   display: block;
-  color: $white;
   font-size: 16px;
   line-height: 1;
-
-  &--big {
-    font-size: 22px;
-    margin-bottom: 4px;
-    @media (max-height: 680px) {
-      font-size: 20px;
-    }
-    @include r($lg) {
-      font-size: 20px;
-    }
-    @media (max-width: 700px) {
-      font-size: 19px;
-    }
-    @include r($phone) {
-      font-size: 18px;
-    }
-  }
+  margin-bottom: 9px;
 }
