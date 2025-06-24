@@ -1,0 +1,58 @@
+.card {
+  &__head {
+    @include flex-center;
+    position: relative;
+    min-height: 400px;
+    background-color: #D9D9D9;
+    margin-bottom: 28px;
+    border-radius: 14px;
+  }
+
+  &__favorite {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    &:hover {
+      svg path {
+        stroke: #ff3232;
+        fill: #ff3232;
+      }
+    }
+  }
+
+  &__add {
+    @include flex-center;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: $black50;
+    border: 1px solid transparent;
+    transition: background-color .4s, border .4s;
+    margin: -70px 16px 15px auto;
+    position: relative;
+    z-index: 10;
+
+    &:hover {
+      background-color: #3d3d3d;
+    }
+  }
+
+  &__price {
+    font-size: 32px;
+    line-height: 1;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

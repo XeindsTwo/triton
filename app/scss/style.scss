@@ -12,9 +12,14 @@
 @import "components/modal";
 @import "components/menu-btn";
 @import "components/form-elements";
+@import "components/card";
 
 @import "home/home";
 @import "home/stocks";
+@import "home/categories";
 @import "home/partners";
 @import "home/contacts";
 @import "home/order";
+@import "home/delivery";
+
+@import "pages/catalog";

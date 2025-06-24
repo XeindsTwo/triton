@@ -1,0 +1,25 @@
+.delivery {
+  &__items {
+    max-width: 1260px;
+    margin: 70px auto 0;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    @include flex-column(0);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 32px 0 24px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  &__description {
+    max-width: 300px;
+  }
+}
