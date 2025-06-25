@@ -12,8 +12,7 @@
   visibility: hidden;
   overflow-y: scroll;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.30);
-  backdrop-filter: blur(41.6px);
+  background: rgba(0, 0, 0, 0.60);
   transition: visibility .6s, opacity .5s;
   @media (max-height: 680px) {
     padding: 35px 0;
@@ -28,6 +27,14 @@
   &.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  &__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 14px;
+    background-color: $white100;
   }
 
   &__close-cross {

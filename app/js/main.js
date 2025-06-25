@@ -33,3 +33,13 @@ new Swiper('.partners__swiper', {
     nextEl: '.reviews__btn--next'
   },
 });
+
+new Swiper('.modal__brand-swiper', {
+  speed: 500,
+  slidesPerView: 4,
+  spaceBetween: 15,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  }
+});
