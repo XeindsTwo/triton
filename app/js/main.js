@@ -43,3 +43,31 @@ new Swiper('.modal__brand-swiper', {
     onlyInViewport: true
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.querySelector(".modal--brand");
+  const modalCloseBtn = document.getElementById("modal-brand-close");
+  const partnerCards = document.querySelectorAll(".partners__card");
+
+  partnerCards.forEach(card => {
+    card.addEventListener("click", () => {
+      modal.classList.add("active");
+      document.body.classList.add("modal-active");
+      document.documentElement.classList.add("active");
+    });
+  });
+
+  modalCloseBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-active");
+    document.documentElement.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      document.body.classList.remove("modal-active");
+      document.documentElement.classList.remove("active");
+    }
+  });
+});

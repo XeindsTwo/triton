@@ -29,12 +29,28 @@
     visibility: visible;
   }
 
+  &__brand-swiper {
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
   &__inner {
     max-width: 1180px;
     margin: 0 auto;
     padding: 50px;
+    position: relative;
     border-radius: 14px;
     background-color: $white100;
+  }
+
+  &__head {
+    @include flex-align-center(20);
+    margin-bottom: 30px;
+
+    &-name {
+      font-size: 36px;
+      font-weight: 600;
+    }
   }
 
   &__close-cross {
@@ -82,6 +98,15 @@
         height: auto;
       }
     }
+  }
+
+  &__description {
+    margin-bottom: 44px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-size: 22px;
   }
 
   &__img {
@@ -155,39 +180,27 @@
   }
 
   &__close {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    bottom: 80px;
-    left: 80px;
+    top: 35px;
+    right: 35px;
+    border: 1px solid transparent;
+    border-radius: 5px;
     z-index: 10;
-    font-size: 18px;
-    padding-bottom: 4px;
-    color: $white;
-    margin-bottom: -4px;
-    border-bottom: 1px solid $white100;
     transition: color .4s, border .4s;
-    @media (max-height: 680px) {
-      bottom: 35px;
-    }
-    @media (max-height: 670px) {
-      display: none;
-    }
-    @media (max-width: 1300px) {
-      left: 50px;
-      bottom: 50px;
-    }
-    @include r($lg) {
-      left: 35px;
-      bottom: 35px;
-    }
-    @include r($sm) {
-      left: 25px;
-    }
-    @include r($phone) {
-      left: 18px;
+
+    &:hover svg path {
+      stroke: $accent;
     }
 
-    &:hover {
-      color: $accent;
+    &:focus {
+      border-color: $accent;
+
+      svg path {
+        stroke: $black;
+      }
     }
   }
 
@@ -213,5 +226,9 @@
       padding: 0 56px 28px;
       gap: 18px;
     }
+  }
+
+  &__link {
+    margin: 0 auto;
   }
 }
